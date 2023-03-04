@@ -8,6 +8,157 @@ body {
   background-color: beige;
 }
 
+.main {
+  background-color: #BDBDBD;
+  padding: 10px;
+  border-top: 6px solid #FFFFFF;
+  border-left: 6px solid #FFFFFF;
+  border-bottom: 6px solid #7B7B7B;
+  border-right: 6px solid #7B7B7B;
+}
+
+.header {
+  height: 100px;
+  background-color: #C0C0C0;
+  border-bottom: 5px solid #FFFFFF;
+  border-right: 5px solid #FFFFFF;
+  border-top: 5px solid #7B7B7B;
+  border-left: 5px solid #7B7B7B;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mines_count, .time {
+  background-color: #000000;
+  width: 100px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.smile_reaction {
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid #FFFFFF;
+  border-left: 5px solid #FFFFFF;
+  border-bottom: 5px solid #7B7B7B;
+  border-right: 5px solid #7B7B7B;
+  background-color: #BDBDBD;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.smile {
+  background-image: url(images/smile1.png);
+}
+
+.wow {
+  background-image: url(images/smile2.png);
+}
+
+.lose {
+  background-image: url(images/smile3.png);
+}
+
+.win {
+  background-image: url(images/smile4.png);
+}
+
+.mines_count, .time {
+  background-color: #000000;
+  width: 100px;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.smile_reaction {
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid #FFFFFF;
+  border-left: 5px solid #FFFFFF;
+  border-bottom: 5px solid #7B7B7B;
+  border-right: 5px solid #7B7B7B;
+  background-color: #BDBDBD;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.smile {
+  background-image: url(images/smile1.png);
+}
+
+.wow {
+  background-image: url(images/smile2.png);
+}
+
+.lose {
+  background-image: url(images/smile3.png);
+}
+
+.win {
+  background-image: url(images/smile4.png);
+}
+
+.smile:active {
+  border: 2px solid #7B7B7B;
+  box-shadow: -1px -1px #7B7B7B;
+  background-color: #C0C0C0;
+}
+
+.digit {
+  height: 60px;
+  width: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.mines_first_digit {
+  background-image: url(images/d0.svg);
+}
+
+.mines_second_digit {
+  background-image: url(images/d4.svg);
+}
+
+.mines_third_digit {
+  background-image: url(images/d0.svg);
+}
+
+.time_first_digit {
+  background-image: url(images/d0.svg);
+}
+
+.time_second_digit {
+  background-image: url(images/d0.svg);
+}
+
+.time_third_digit {
+  background-image: url(images/d0.svg);
+}
+
 .field {
   display: grid;
   grid-template-columns: repeat(16, 40px);
@@ -28,18 +179,15 @@ button {
 }
 
 .mine {
-  background-image: url(images/mine.png);
-  background-size: 100%;
+  background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  display: none;
-  z-index: 0
 }
 
 .flag {
-  background-image: url(images/flag.webp);
+  background-image: url(images/flag.webp) !important;
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
