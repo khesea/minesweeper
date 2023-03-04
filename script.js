@@ -98,12 +98,13 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
 
     cell.disabled = true;
     cell.style.border = '1px solid #7B7B7B';
+    cell.classList.remove('flag');
     if (isBomb(row, column)) {
       for (let i = 0; i < 40; i++) {
         mines[i].style.cssText = 'background-image: url(images/mine.png);';
       }
       cell.style.cssText = 'background-image: url(images/mine.png);';
-      cell.style.cssText = 'background-color: red;';
+      cell.style.backgroundColor = 'red';
       for (let i = 0; i < cells.length; i++) {
         cells[i].disabled = true;
       }
@@ -118,7 +119,12 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     closedCount--;
     if (closedCount <= BOMBS_COUNT) {
       smile.classList.remove('smile');
-      smile.classList.add('lose');
+      smile.classList.add('win');
+      for (let i = 0; i < cells.length; i++) {
+        cells[i].disabled = true;
+      }
+      clearInterval(intervalID1);
+      clearInterval(intervalID2);
       return;
     }
 
