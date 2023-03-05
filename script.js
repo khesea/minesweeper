@@ -33,7 +33,7 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
     open(row, column);
   });
 
-  field.addEventListener('click', setTimer, false);
+  field.addEventListener('mouseup', setTimer, false);
   function setTimer() {
     intervalID1 = setInterval(function () {
       number++;
@@ -53,7 +53,7 @@ function startGame(WIDTH, HEIGHT, BOMBS_COUNT) {
         secondDigit.style.cssText = `background-image: url(images/d${secondNumber}.svg)`;
       }
     }, 10000);
-    field.removeEventListener('click', setTimer, false);
+    field.removeEventListener('mouseup', setTimer, false);
   }
 
   const smile = document.querySelector('.smile_reaction');
